@@ -1,0 +1,33 @@
+print("===== MENU =====")
+print("1. Suma")
+print("2. Resta")
+print("3. Multiplicacion")
+print("4. Division")
+print("5. Salir")
+print("")
+opcion = int(input("Elija una opcion (1-4 para operar, 5 para salir): "))
+
+if 1 <= opcion <= 4:
+    a = float(input("Ingrese primer numero: "))
+    b = float(input("Ingrese segundo numero: "))
+    
+    if opcion == 1:
+        resultado = a + b
+    elif opcion == 2:
+        resultado = a - b
+    elif opcion == 3:
+        resultado = a * b
+    elif opcion == 4:
+        if b != 0:
+            resultado = a / b
+        else:
+            print("Error: Division por cero")
+    
+    if opcion != 4 or b != 0:
+        print("Resultado:", resultado)
+
+else:
+    if opcion == 5:
+        print("Saliendo del sistema...")
+    else:
+        print("Error: opcion invalida")
